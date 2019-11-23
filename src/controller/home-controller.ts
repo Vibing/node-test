@@ -1,16 +1,20 @@
 import * as ayc from 'async';
 
-const sleep = t => {
-  const time = Date.now() + t * 1000;
-  while (Date.now() < time) {}
+const test = async () => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(true);
+    }, 2000);
+  });
 };
 
 var q = ayc.queue(function(task, callback) {
   console.log('进入');
-  sleep(2);
-  console.log('success');
-  callback();
-}, 3);
+  test().then(r => {
+    console.log('success');
+    callback();
+  });
+}, 2);
 
 q.drain(function() {
   console.log('所有任务处理完');

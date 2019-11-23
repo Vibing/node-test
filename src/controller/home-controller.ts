@@ -7,7 +7,7 @@ const sleep = t => {
 
 var q = ayc.queue(function(task, callback) {
   console.log('进入');
-  sleep(1);
+  sleep(2);
   console.log('success');
   callback();
 }, 3);

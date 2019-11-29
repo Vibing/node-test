@@ -37,7 +37,7 @@ export default class HomeController {
     while (performance.now() < now + 1000) {}
 
     ctx.body = {
-      state: 'success'
+      state: 'success aasdf'
     };
   }
 }

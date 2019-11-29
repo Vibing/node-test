@@ -32,6 +32,10 @@ export default class HomeController {
     q.push({ name: '任务' + count }, err => {
       console.log('完成处理:' + count);
     });
+
+    const now = performance.now();
+    while (performance.now() < now + 1000) {}
+
     ctx.body = {
       state: 'success'
     };

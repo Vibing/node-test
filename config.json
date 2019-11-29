@@ -1,4 +1,7 @@
 {
   "appid": "82748",
-  "secret": "554749120f7a8b8081259902cec48f161e87f7e0"
+  "secret": "554749120f7a8b8081259902cec48f161e87f7e0",
+  "logdir": "./logs",
+  "error_log": ["./err_logs"],
+  "packages": ["./package.json"]
 }
